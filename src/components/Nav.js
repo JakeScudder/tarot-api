@@ -7,16 +7,16 @@ class Nav extends Component {
       <nav className="main-nav">
         <ul>
           <li className="nav-li">
-            <NavLink to="/one">Draw One</NavLink>
+            <NavLink to="/one">One</NavLink>
           </li>
           <li className="nav-li">
-            <NavLink to="/three">Draw Three</NavLink>
+            <NavLink to="/three">Three</NavLink>
           </li>
           <li className="nav-li">
-            <NavLink to="/four">Draw Four</NavLink>
+            <NavLink to="/four">Four</NavLink>
           </li>
           <li className="nav-li">
-            <NavLink to="/celtic">Draw Celtic Cross</NavLink>
+            <NavLink to="/celtic">Celtic Cross</NavLink>
           </li>
         </ul>
       </nav>

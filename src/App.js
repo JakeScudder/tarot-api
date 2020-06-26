@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components
+import HomePage from "./components/HomePage";
 import OneCard from "./components/OneCard";
 import Nav from "./components/Nav";
 
 import axios from "axios";
-import logo from "./logo.svg";
+import logo from "./galaxy.svg";
 import "./App.css";
 
 class App extends Component {
@@ -42,16 +43,20 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1>Draw Your Hand</h1>
+            <h1>
+              Draw Your <span className="secondary">Hand</span>
+            </h1>
             <Nav />
           </header>
           <Switch>
             <Route
+              exact
               path="/one"
-              render={(props) => (
-                <OneCard {...props} data={this.state.deck} />
-              )}
+              render={(props) => <OneCard {...props} data={this.state.deck} />}
             />
+            <Route path="/">
+              <HomePage />
+            </Route>
           </Switch>
         </div>
       </BrowserRouter>
