@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // Components
 import HomePage from "./components/HomePage";
 import OneCard from "./components/OneCard";
+import ThreeCard from "./components/ThreeCard";
+import FourCard from "./components/FourCard";
 import Nav from "./components/Nav";
 
 import axios from "axios";
@@ -37,6 +39,7 @@ class App extends Component {
         console.log("Error fetching the cards:", error);
       });
   };
+
   render() {
     return (
       <BrowserRouter>
@@ -49,6 +52,18 @@ class App extends Component {
             <Nav />
           </header>
           <Switch>
+            <Route
+              exact
+              path="/four"
+              render={(props) => <FourCard {...props} data={this.state.deck} />}
+            />
+            <Route
+              exact
+              path="/three"
+              render={(props) => (
+                <ThreeCard {...props} data={this.state.deck} />
+              )}
+            />
             <Route
               exact
               path="/one"

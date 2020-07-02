@@ -44,8 +44,15 @@
 }
 
 h1 {
+  font-size: 1.5rem;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.summary {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .secondary {
@@ -53,14 +60,63 @@ h1 {
 }
 
 .card-image {
-  width: 300px;
+  width: 290px;
+}
+
+.card-image-preview {
+  width: 100px;
+  margin-top: 4vh;
+}
+
+/***** Three Card */
+#card-image-first {
+  position: relative;
+  width: 82px;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+#card-image-second {
+  margin-bottom: 1vh;
+  margin-left: -3vh;
+  position: relative;
+  width: 82px;
+  z-index: 0;
+}
+#card-image-third {
+  position: relative;
+  margin-left: -3vh;
+  margin-bottom: 0vh;
+  width: 82px;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.name-title {
+  border-top: 5px solid black;
+}
+.threecard-summary {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.threecard-image {
+  width: 250px;
+}
+
+/***** Four Card */
+
+#card-image-arching {
+  width: 100px;
 }
 
 /* Nav Bar */
 
 .main-nav {
-  width: 100%;
-  margin-left: auto;
+  width: 90%;
+  margin-left: 5vh;
   margin-right: auto;
 }
 
@@ -81,8 +137,9 @@ h1 {
   border: 2px solid white;
   border-radius: 5px;
   background-color: grey;
-  width: 70px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  font-size: 14px;
 }
 
 .nav-li a {

@@ -15,9 +15,9 @@ class Nav extends Component {
           <li className="nav-li">
             <NavLink to="/four">Four</NavLink>
           </li>
-          <li className="nav-li">
+          {/* <li className="nav-li">
             <NavLink to="/celtic">Celtic Cross</NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     );

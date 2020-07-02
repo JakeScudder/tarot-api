@@ -8,6 +8,15 @@ class OneCard extends Component {
   //   };
   // }
 
+  formatName = (name) => {
+    return name
+      .split("-")
+      .map((word) => {
+        return word[0].toUpperCase() + word.substr(1);
+      })
+      .join(" ");
+  };
+
   render() {
     let deck = this.props.data;
     let randomNum = Math.floor(Math.random() * 78);
@@ -17,7 +26,7 @@ class OneCard extends Component {
     let image;
     if (deck && deck[0]) {
       card = deck[randomNum];
-      cardName = card.name;
+      cardName = this.formatName(card.name);
       cardSummary = card.summary;
       console.log("card:", card.name);
       image = card.image;
@@ -26,10 +35,10 @@ class OneCard extends Component {
     if (card !== null) {
       return (
         <div>
-          <h1>You Drew</h1>
-          <h2 className="name-title">{cardName}</h2>
-          <h4 className="summary">{cardSummary}</h4>
+          <h3>You Drew</h3>
+          <h2 className="name-title-one">{cardName}</h2>
           <img className="card-image" alt="Card" src={image} />
+          <h4 className="summary">{cardSummary}</h4>
         </div>
       );
     } else {
