@@ -21,7 +21,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchCards();
+    if (this.state.deck === null) {
+      this.fetchCards();
+    } else {
+      return console.log("deck loaded");
+    }
   }
 
   fetchCards = () => {
@@ -49,6 +53,7 @@ class App extends Component {
             <h1>
               Draw Your <span className="secondary">Hand</span>
             </h1>
+            <h1>How Many Cards?</h1>
             <Nav />
           </header>
           <Switch>

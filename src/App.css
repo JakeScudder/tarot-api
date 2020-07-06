@@ -49,6 +49,21 @@ h1 {
   margin-bottom: 0px;
 }
 
+h3 {
+  display: inline-block;
+  margin-right: -45px;
+}
+
+#help-button {
+  font-size: 26px;
+  float: right;
+  width: 45px;
+  height: 45px;
+}
+p {
+  margin-bottom: -10px;
+}
+
 .summary {
   width: 90%;
   margin-left: auto;
@@ -56,7 +71,7 @@ h1 {
 }
 
 .secondary {
-  color: rgb(16, 108, 189);
+  color: black;
 }
 
 .card-image {
@@ -66,6 +81,14 @@ h1 {
 .card-image-preview {
   width: 100px;
   margin-top: 4vh;
+}
+
+/***** Homepage */
+
+#homepage-div {
+  max-width: 690px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /***** Three Card */
@@ -116,7 +139,7 @@ h1 {
 
 .main-nav {
   width: 90%;
-  margin-left: 5vh;
+  margin-left: auto;
   margin-right: auto;
 }
 

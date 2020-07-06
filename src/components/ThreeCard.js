@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
 class ThreeCard extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     loading: true,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      showing: true,
+    };
+  }
 
   formatName = (name) => {
     return name
@@ -17,7 +18,14 @@ class ThreeCard extends Component {
       .join(" ");
   };
 
+  toggle = () => {
+    this.setState({
+      showing: !this.state.showing,
+    });
+  };
+
   render() {
+    const { showing } = this.state;
     let deck = this.props.data;
     let card1;
     let cardName1;
@@ -69,32 +77,55 @@ class ThreeCard extends Component {
     if (card1 !== null) {
       return (
         <div>
-          <h1>You Drew</h1>
-          <div className="cards-displayed">
-            <img id="card-image-first" alt="Card" src={image1} />
-            <img id="card-image-second" alt="Card" src={image2} />
-            <img id="card-image-third" alt="Card" src={image3} />
-            <h4>
-              {cardName1}, {cardName2}, {cardName3}
-            </h4>
+          <div id="title-help-container">
+            <h3>You Drew</h3>
+            <button id="help-button" onClick={this.toggle}>
+              ?
+            </button>
           </div>
-          <div className="threecard-summary">
-            {/* Card 1 */}
-            <h2 className="name-title">{cardName1}</h2>
-            <img className="threecard-image" alt="Card" src={image1} />
-            <h4 className="summary">{cardSummary1}</h4>
 
-            <br></br>
-            {/* Card 2 */}
-            <h2 className="name-title">{cardName2}</h2>
-            <img className="threecard-image" alt="Card" src={image2} />
-            <h4 className="summary">{cardSummary2}</h4>
+          {showing ? (
+            <div>
+              <div className="cards-displayed">
+                <img id="card-image-first" alt="Card" src={image1} />
+                <img id="card-image-second" alt="Card" src={image2} />
+                <img id="card-image-third" alt="Card" src={image3} />
+                <h4>
+                  {cardName1}, {cardName2}, {cardName3}
+                </h4>
+              </div>
+              <div className="threecard-summary">
+                {/* Card 1 */}
+                <h2 className="name-title">Past: {cardName1}</h2>
+                <img className="threecard-image" alt="Card" src={image1} />
+                <h4 className="summary">{cardSummary1}</h4>
 
-            {/* Card 3 */}
-            <h2 className="name-title">{cardName3}</h2>
-            <img className="threecard-image" alt="Card" src={image3} />
-            <h4 className="summary">{cardSummary3}</h4>
-          </div>
+                <br></br>
+                {/* Card 2 */}
+                <h2 className="name-title">Present: {cardName2}</h2>
+                <img className="threecard-image" alt="Card" src={image2} />
+                <h4 className="summary">{cardSummary2}</h4>
+
+                {/* Card 3 */}
+                <h2 className="name-title">Future: {cardName3}</h2>
+                <img className="threecard-image" alt="Card" src={image3} />
+                <h4 className="summary">{cardSummary3}</h4>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <h2>Past, Present, Future</h2>
+              <p>
+                Past: What factors from the past still affect your question or
+                issue
+              </p>
+              <p>
+                Present: What surrounds this currently: Positive or Negative
+                aspects
+              </p>
+              <p>Future: What to focus on or what should be avoided</p>
+            </div>
+          )}
         </div>
       );
     } else {

@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 
 class OneCard extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     loading: true,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      showing: true,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      loading: false,
+    });
+  }
 
   formatName = (name) => {
     return name
@@ -17,7 +24,15 @@ class OneCard extends Component {
       .join(" ");
   };
 
+  toggle = (e) => {
+    e.preventDefault();
+    this.setState({
+      showing: !this.state.showing,
+    });
+  };
+
   render() {
+    const { showing } = this.state;
     let deck = this.props.data;
     let randomNum = Math.floor(Math.random() * 78);
     let card;
@@ -35,14 +50,23 @@ class OneCard extends Component {
     if (card !== null) {
       return (
         <div>
-          <h3>You Drew</h3>
-          <h2 className="name-title-one">{cardName}</h2>
-          <img className="card-image" alt="Card" src={image} />
-          <h4 className="summary">{cardSummary}</h4>
+          <div id="title-help-container">
+            <h3>You Drew</h3>
+            <button id="help-button" onClick={this.toggle}>
+              ?
+            </button>
+          </div>
+          {showing ? (
+            <div>
+              <h2 className="name-title-one">{cardName}</h2>
+              <img className="card-image" alt="Card" src={image} />
+              <h4 className="summary">{cardSummary}</h4>
+            </div>
+          ) : null}
         </div>
       );
     } else {
-      return <h1>Card Data Missing :(</h1>;
+      return <h2>Card Data missing :(</h2>;
     }
   }
 }
