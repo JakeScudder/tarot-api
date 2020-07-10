@@ -4,9 +4,13 @@ class HomePage extends Component {
   render() {
     return (
       <div id="homepage-div">
-        <h1>What Awaits? </h1>
+        <h1>What Awaits?</h1>
         <p>
           If you are unfamiliar with Tarot Cards, here is a quick introduction:
+        </p>
+        <p>
+          Decide if you want to draw 1, 3, or 4 cards. Some people use two card
+          readings, but the books I have read did not include it.
         </p>
         <p>
           Try to frame a question or situation in your head. When you draw the

@@ -40,6 +40,10 @@ class OneCard extends Component {
     });
   };
 
+  refresh = () => {
+    window.location.reload();
+  };
+
   render() {
     const { showing } = this.state;
     let deck = this.props.data;
@@ -60,6 +64,10 @@ class OneCard extends Component {
       return (
         <div>
           <div id="title-help-container">
+            <button id="refresh" onClick={this.refresh}>
+              <h3 className="refresh-title">Draw</h3>
+              <h3 className="refresh-title">Another</h3>
+            </button>
             <h3>You Drew</h3>
             <button id="help-button" onClick={this.toggle}>
               ?

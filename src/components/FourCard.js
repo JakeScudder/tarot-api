@@ -59,6 +59,10 @@ class FourCard extends Component {
     });
   };
 
+  refresh = () => {
+    window.location.reload();
+  };
+
   render() {
     const { showing } = this.state;
 
@@ -118,6 +122,10 @@ class FourCard extends Component {
     if (card1 !== null) {
       return (
         <div>
+          <button id="refresh" onClick={this.refresh}>
+            <h3 className="refresh-title">Draw</h3>
+            <h3 className="refresh-title">Another</h3>
+          </button>
           <h1 className="you-drew">You Drew</h1>
           <button id="help-button" onClick={this.toggle}>
             ?

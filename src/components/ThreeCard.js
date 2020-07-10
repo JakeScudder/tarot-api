@@ -34,6 +34,10 @@ class ThreeCard extends Component {
     });
   };
 
+  refresh = () => {
+    window.location.reload();
+  };
+
   randomNumGeneration = () => {
     let randomNum1 = Math.floor(Math.random() * 78);
     let randomNum2 = Math.floor(Math.random() * 78);
@@ -110,6 +114,10 @@ class ThreeCard extends Component {
       return (
         <div>
           <div id="title-help-container">
+            <button id="refresh" onClick={this.refresh}>
+              <h3 className="refresh-title">Draw</h3>
+              <h3 className="refresh-title">Another</h3>
+            </button>
             <h1 className="you-drew">You Drew</h1>
             <button id="help-button" onClick={this.toggle}>
               ?
