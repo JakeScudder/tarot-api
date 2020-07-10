@@ -9,6 +9,7 @@
 
 .App-logo {
   margin-top: 5%;
+  margin-bottom: 10px;
   height: 15vmin;
   pointer-events: none;
   animation: App-logo-spin infinite 20s linear;
@@ -54,12 +55,24 @@ h3 {
   margin-right: -45px;
 }
 
+.you-drew {
+  margin-top: 10px;
+  margin-right: -45px;
+  display: inline-block;
+}
+
+/******* Help */
 #help-button {
   font-size: 26px;
   float: right;
   width: 45px;
   height: 45px;
 }
+
+.daily-help-title {
+  margin: 0;
+}
+
 p {
   margin-bottom: -10px;
 }
@@ -76,6 +89,7 @@ p {
 
 .card-image {
   width: 290px;
+  border-radius: 15px;
 }
 
 .card-image-preview {
@@ -92,26 +106,37 @@ p {
 }
 
 /***** Three Card */
-#card-image-first {
+.card-container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+#threecard-image-first {
   position: relative;
-  width: 82px;
-  margin-top: 2vh;
+  width: 81px;
+  margin-bottom: -0.3vh;
   margin-left: 2vh;
+  border-radius: 5px;
   transform: rotate(-10deg);
   z-index: -1;
 }
+
 #card-image-second {
   margin-bottom: 1vh;
   margin-left: -3vh;
   position: relative;
   width: 82px;
+  border-radius: 5px;
   z-index: 0;
 }
 #card-image-third {
   position: relative;
   margin-left: -3vh;
-  margin-bottom: 0vh;
+  margin-bottom: -0.3vh;
   width: 82px;
+  border-radius: 5px;
   transform: rotate(10deg);
   z-index: 1;
 }
@@ -131,8 +156,29 @@ p {
 
 /***** Four Card */
 
+#card-image-first {
+  position: relative;
+  width: 81px;
+  margin-bottom: 0.4vh;
+  margin-left: 2vh;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+
 #card-image-arching {
   width: 100px;
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+#overarching-title {
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 /* Nav Bar */

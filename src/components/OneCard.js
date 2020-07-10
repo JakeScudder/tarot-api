@@ -5,11 +5,13 @@ class OneCard extends Component {
     super(props);
     this.state = {
       loading: true,
-      showing: true,
+      showing: false,
+      num1: null,
     };
   }
 
   componentDidMount() {
+    this.randomNumGeneration();
     this.setState({
       loading: false,
     });
@@ -31,15 +33,22 @@ class OneCard extends Component {
     });
   };
 
+  randomNumGeneration = () => {
+    let randomNum = Math.floor(Math.random() * 78);
+    this.setState({
+      num1: randomNum,
+    });
+  };
+
   render() {
     const { showing } = this.state;
     let deck = this.props.data;
-    let randomNum = Math.floor(Math.random() * 78);
+    let randomNum = this.state.num1;
     let card;
     let cardName;
     let cardSummary;
     let image;
-    if (deck && deck[0]) {
+    if (deck && deck[0] && randomNum !== null) {
       card = deck[randomNum];
       cardName = this.formatName(card.name);
       cardSummary = card.summary;
@@ -56,13 +65,30 @@ class OneCard extends Component {
               ?
             </button>
           </div>
-          {showing ? (
-            <div>
-              <h2 className="name-title-one">{cardName}</h2>
-              <img className="card-image" alt="Card" src={image} />
-              <h4 className="summary">{cardSummary}</h4>
-            </div>
-          ) : null}
+          {showing
+            ? (
+              <div>
+                <h3 className="daily-help-title">Daily Reading</h3>
+                <p>
+                  A simple reading, take a moment to think about what might be
+                  the focus for your day
+                </p>
+                <p>
+                  To reiterate, try not to be to literal. Look at the imagery
+                  and search for the metaphors
+                </p>
+                <p>
+                  For example, the Death card could be a reminder that there is
+                  a situation or relationship you should put behind you.
+                </p>
+              </div>
+            )
+            : null}
+          <div>
+            <h2 className="name-title-one">{cardName}</h2>
+            <img className="card-image" alt="Card" src={image} />
+            <h4 className="summary">{cardSummary}</h4>
+          </div>
         </div>
       );
     } else {

@@ -1,12 +1,27 @@
 import React, { Component } from "react";
 
 class FourCard extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     loading: true,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      showing: false,
+      num1: null,
+      num2: null,
+      num3: null,
+      num4: null,
+    };
+  }
+
+  componentDidMount() {
+    this.randomNumGeneration();
+  }
+
+  toggle = () => {
+    this.setState({
+      showing: !this.state.showing,
+    });
+  };
 
   formatName = (name) => {
     return name
@@ -17,7 +32,36 @@ class FourCard extends Component {
       .join(" ");
   };
 
+  randomNumGeneration = () => {
+    let randomNum1 = Math.floor(Math.random() * 78);
+    let randomNum2 = Math.floor(Math.random() * 78);
+    if (randomNum2 === randomNum1) {
+      randomNum2 = Math.floor(Math.random() * 78);
+    }
+    let randomNum3 = Math.floor(Math.random() * 78);
+    if (randomNum3 === randomNum1 || randomNum3 === randomNum2) {
+      randomNum3 = Math.floor(Math.random() * 78);
+    }
+    let randomNum4 = Math.floor(Math.random() * 78);
+    if (
+      randomNum4 === randomNum1 ||
+      randomNum4 === randomNum2 ||
+      randomNum4 === randomNum3
+    ) {
+      randomNum4 = Math.floor(Math.random() * 78);
+    }
+
+    this.setState({
+      num1: randomNum1,
+      num2: randomNum2,
+      num3: randomNum3,
+      num4: randomNum4,
+    });
+  };
+
   render() {
+    const { showing } = this.state;
+
     let deck = this.props.data;
     let card1;
     let cardName1;
@@ -39,26 +83,12 @@ class FourCard extends Component {
     let cardSummary4;
     let image4;
 
-    // Random Num Generation
-    let randomNum1 = Math.floor(Math.random() * 78);
-    let randomNum2 = Math.floor(Math.random() * 78);
-    if (randomNum2 === randomNum1) {
-      randomNum2 = Math.floor(Math.random() * 78);
-    }
-    let randomNum3 = Math.floor(Math.random() * 78);
-    if (randomNum3 === randomNum1 || randomNum3 === randomNum2) {
-      randomNum3 = Math.floor(Math.random() * 78);
-    }
-    let randomNum4 = Math.floor(Math.random() * 78);
-    if (
-      randomNum4 === randomNum1 ||
-      randomNum4 === randomNum2 ||
-      randomNum4 === randomNum3
-    ) {
-      randomNum4 = Math.floor(Math.random() * 78);
-    }
+    let randomNum1 = this.state.num1;
+    let randomNum2 = this.state.num2;
+    let randomNum3 = this.state.num3;
+    let randomNum4 = this.state.num4;
 
-    if (deck && deck[0]) {
+    if (deck && deck[0] && randomNum1 !== null) {
       //Card 1
       card1 = deck[randomNum1];
       cardName1 = this.formatName(card1.name);
@@ -88,15 +118,32 @@ class FourCard extends Component {
     if (card1 !== null) {
       return (
         <div>
-          <h1>You Drew</h1>
+          <h1 className="you-drew">You Drew</h1>
+          <button id="help-button" onClick={this.toggle}>
+            ?
+          </button>
+          {showing
+            ? <div>
+              <h2>Over and Under</h2>
+              <p>
+                This four card spread contains one card that represents the
+                overarching theme regarding the question or issue, followed by
+                three underlying factors.
+              </p>
+              <p>
+                Think about what is the main theme of your drawing and what are
+                the smaller things that play into that.
+              </p>
+            </div>
+            : null}
           <div id="overarching-card">
             <img id="card-image-arching" alt="Card" src={image4} />
+            <h2 id="overarching-title">{cardName4}</h2>
           </div>
           <div className="cards-displayed">
             <img id="card-image-first" alt="Card" src={image1} />
             <img id="card-image-second" alt="Card" src={image2} />
             <img id="card-image-third" alt="Card" src={image3} />
-            <h2>{cardName4}</h2>
             <h4>
               {cardName1}, {cardName2}, {cardName3}
             </h4>
