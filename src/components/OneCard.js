@@ -56,7 +56,6 @@ class OneCard extends Component {
       card = deck[randomNum];
       cardName = this.formatName(card.name);
       cardSummary = card.summary;
-      console.log("card:", card.name);
       image = card.image;
     }
 
