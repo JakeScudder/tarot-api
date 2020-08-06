@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 // Components
 import HomePage from "./components/HomePage";
@@ -46,7 +46,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
@@ -79,7 +79,7 @@ class App extends Component {
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
