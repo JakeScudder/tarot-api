@@ -5,6 +5,7 @@
 .App {
   text-align: center;
   min-height: 100vh;
+  background-color: #5a9ac5cc;
 }
 
 .App-logo {
@@ -145,6 +146,7 @@ p {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff91;
 }
 
 #hide-description {
@@ -167,10 +169,9 @@ p {
   margin-top: 60px;
 }
 
-#threecard-image-first {
+#card-image-first {
   position: relative;
   width: 81px;
-  margin-bottom: -0.3vh;
   margin-left: 2vh;
   border-radius: 5px;
   transform: rotate(-10deg);
@@ -178,7 +179,7 @@ p {
 }
 
 #card-image-second {
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
   margin-left: -3vh;
   position: relative;
   width: 82px;
@@ -256,7 +257,6 @@ p {
   display: table;
   margin-right: 10px;
   margin-bottom: 15px;
-  padding: 2%;
   border: 2px solid white;
   border-radius: 5px;
   background-color: grey;
@@ -268,7 +268,123 @@ p {
 .nav-li a {
   display: table-cell;
   vertical-align: middle;
-  padding: 10px 0px;
+  padding: 10px 10px;
   text-decoration: none;
   color: rgb(16, 108, 189);
+}
+
+/* For Tablet */
+@media screen and (min-width: 700px) {
+  .App-logo-filler {
+    height: 30vmin;
+  }
+
+  #one-card-container {
+    width: 72.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #three-card-container {
+    width: 72.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Buttons */
+
+  #refresh {
+    width: 100px;
+    height: 75px;
+  }
+
+  #refresh h3 {
+    font-size: 22px;
+    margin-left: 0px;
+  }
+
+  #help-button {
+    width: 100px;
+    height: 75px;
+    font-size: 36px;
+  }
+}
+
+/* For Large Screens */
+@media screen and (min-width: 1300px) {
+  #one-card-container {
+    width: 62.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #three-card-container {
+    width: 62.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Multiple card sizing*/
+
+  #card-image-arching {
+    width: 140px;
+  }
+  #card-image-first {
+    width: 120px;
+  }
+  #card-image-second {
+    width: 120px;
+  }
+  #card-image-third {
+    width: 120px;
+  }
+
+  #four-card-container {
+    width: 62.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards-displayed h4 {
+    font-size: 32px;
+  }
+
+  #overarching-title {
+    font-size: 32px;
+  }
+
+  .nav-li a {
+    font-size: 24px;
+    padding: 20px 20px;
+  }
+}
+
+/* For Widscreen Desktop */
+@media screen and (min-width: 1700px) {
+  #one-card-container {
+    width: 52%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #three-card-container {
+    width: 52%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #four-card-container {
+    width: 52%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-li a {
+    font-size: 24px;
+    padding: 30px 30px;
+  }
+
+  .card-container {
+    width: 85%;
+  }
 }

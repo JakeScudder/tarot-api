@@ -112,19 +112,19 @@ class ThreeCard extends Component {
 
     if (card1 !== null) {
       return (
-        <div>
+        <div id="three-card-container">
           <div id="title-help-container">
             <button id="refresh" onClick={this.refresh}>
               <h3 className="refresh-title">Draw</h3>
-              <h3 className="refresh-title">Another</h3>
+              <h3 className="refresh-title">Again</h3>
             </button>
             <h1 className="you-drew">You Drew</h1>
             <button id="help-button" onClick={this.toggle}>
               ?
             </button>
           </div>
-          {showing
-            ? <div>
+          {showing ? (
+            <div>
               <h2>Past, Present, Future</h2>
               <p>
                 Past: What factors from the past still affect your question or
@@ -136,10 +136,10 @@ class ThreeCard extends Component {
               </p>
               <p>Future: What to focus on or what should be avoided</p>
             </div>
-            : null}
+          ) : null}
           <div className="card-container">
             <div className="cards-displayed">
-              <img id="threecard-image-first" alt="Card" src={image1} />
+              <img id="card-image-first" alt="Card" src={image1} />
               <img id="card-image-second" alt="Card" src={image2} />
               <img id="card-image-third" alt="Card" src={image3} />
               <h4>

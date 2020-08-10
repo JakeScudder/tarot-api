@@ -61,36 +61,34 @@ class OneCard extends Component {
 
     if (card !== null) {
       return (
-        <div>
+        <div id="one-card-container">
           <div id="title-help-container">
             <button id="refresh" onClick={this.refresh}>
               <h3 className="refresh-title">Draw</h3>
-              <h3 className="refresh-title">Another</h3>
+              <h3 className="refresh-title">Again</h3>
             </button>
             <h3>You Drew</h3>
             <button id="help-button" onClick={this.toggle}>
               ?
             </button>
           </div>
-          {showing
-            ? (
-              <div>
-                <h3 className="daily-help-title">Daily Reading</h3>
-                <p>
-                  A simple reading, take a moment to think about what might be
-                  the focus for your day
-                </p>
-                <p>
-                  To reiterate, try not to be to literal. Look at the imagery
-                  and search for the metaphors
-                </p>
-                <p>
-                  For example, the Death card could be a reminder that there is
-                  a situation or relationship you should put behind you.
-                </p>
-              </div>
-            )
-            : null}
+          {showing ? (
+            <div>
+              <h3 className="daily-help-title">Daily Reading</h3>
+              <p>
+                A simple reading, take a moment to think about what might be the
+                focus for your day
+              </p>
+              <p>
+                To emphasize, try not to be to literal. Look at the imagery and
+                search for the metaphors
+              </p>
+              <p>
+                For example, the Death card could be a reminder that there is a
+                situation or relationship you should put behind you.
+              </p>
+            </div>
+          ) : null}
           <div>
             <h2 className="name-title-one">{cardName}</h2>
             <img className="card-image" alt="Card" src={image} />

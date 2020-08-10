@@ -121,7 +121,7 @@ class FourCard extends Component {
 
     if (card1 !== null) {
       return (
-        <div>
+        <div id="four-card-container">
           <button id="refresh" onClick={this.refresh}>
             <h3 className="refresh-title">Draw</h3>
             <h3 className="refresh-title">Another</h3>
@@ -130,8 +130,8 @@ class FourCard extends Component {
           <button id="help-button" onClick={this.toggle}>
             ?
           </button>
-          {showing
-            ? <div>
+          {showing ? (
+            <div>
               <h2>Over and Under</h2>
               <p>
                 This four card spread contains one card that represents the
@@ -143,7 +143,7 @@ class FourCard extends Component {
                 the smaller things that play into that.
               </p>
             </div>
-            : null}
+          ) : null}
           <div id="overarching-card">
             <img id="card-image-arching" alt="Card" src={image4} />
             <h2 id="overarching-title">{cardName4}</h2>
