@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tarot-api/static/css/main.38411900.chunk.css",
-    "main.js": "/tarot-api/static/js/main.eb9900a6.chunk.js",
-    "main.js.map": "/tarot-api/static/js/main.eb9900a6.chunk.js.map",
+    "main.js": "/tarot-api/static/js/main.c6fb9789.chunk.js",
+    "main.js.map": "/tarot-api/static/js/main.c6fb9789.chunk.js.map",
     "runtime-main.js": "/tarot-api/static/js/runtime-main.a59d030a.js",
     "runtime-main.js.map": "/tarot-api/static/js/runtime-main.a59d030a.js.map",
     "static/js/2.7c70972f.chunk.js": "/tarot-api/static/js/2.7c70972f.chunk.js",
     "static/js/2.7c70972f.chunk.js.map": "/tarot-api/static/js/2.7c70972f.chunk.js.map",
     "index.html": "/tarot-api/index.html",
-    "precache-manifest.457606fc5736d663a93beb139ec91233.js": "/tarot-api/precache-manifest.457606fc5736d663a93beb139ec91233.js",
+    "precache-manifest.8155c3f3bdeca72f59086d7140748e4a.js": "/tarot-api/precache-manifest.8155c3f3bdeca72f59086d7140748e4a.js",
     "service-worker.js": "/tarot-api/service-worker.js",
     "static/css/main.38411900.chunk.css.map": "/tarot-api/static/css/main.38411900.chunk.css.map",
     "static/js/2.7c70972f.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.7c70972f.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a59d030a.js",
     "static/js/2.7c70972f.chunk.js",
     "static/css/main.38411900.chunk.css",
-    "static/js/main.eb9900a6.chunk.js"
+    "static/js/main.c6fb9789.chunk.js"
   ]
 }
