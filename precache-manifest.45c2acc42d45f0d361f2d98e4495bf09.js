@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1147287761d4995ce43517016d5a06f2",
+    "revision": "dd77606bfd5cab42d87f40b3245840d3",
     "url": "/tarot-api/index.html"
   },
   {
-    "revision": "1804ee3a34d83c113d8f",
-    "url": "/tarot-api/static/css/main.bc499705.chunk.css"
+    "revision": "1c8bffab631b0666afd9",
+    "url": "/tarot-api/static/css/main.9efcd2d8.chunk.css"
   },
   {
     "revision": "292fea88b15fb189e1bb",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tarot-api/static/js/2.7c70972f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1804ee3a34d83c113d8f",
-    "url": "/tarot-api/static/js/main.deb91281.chunk.js"
+    "revision": "1c8bffab631b0666afd9",
+    "url": "/tarot-api/static/js/main.187a5cd3.chunk.js"
   },
   {
     "revision": "b2a70cc6cf18f0bf0ad0",
