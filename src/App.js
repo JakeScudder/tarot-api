@@ -21,6 +21,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //Trying to solve Cross Origin bugs ///Great way to attach a Script
+    // const script = document.createElement("script");
+    // script.crossOrigin = "anonymous";
+    // script.async = true;
+    // document.body.appendChild(script);
+
     if (this.state.deck === null) {
       this.fetchCards();
     } else {
@@ -31,9 +37,19 @@ class App extends Component {
   fetchCards = () => {
     //Only runs in local host at the moment
     //Original functional deployment link "https://cors-anywhere.herokuapp.com/https://tarot.howlcode.com/api/v1/cards"
+
+    //Alternative fetch attempts: Works locally, not deployed
+    // "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards"
+
     axios
       .get(
-        "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards"
+        "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards",
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Cross-Origin-Resource-Policy": "cross-origin",
+          },
+        }
       )
       .then((res) => {
         console.log(res);
