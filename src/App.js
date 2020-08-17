@@ -29,9 +29,11 @@ class App extends Component {
   }
 
   fetchCards = () => {
+    //Only runs in local host at the moment
+    //Original functional deployment link "https://cors-anywhere.herokuapp.com/https://tarot.howlcode.com/api/v1/cards"
     axios
       .get(
-        "https://cors-anywhere.herokuapp.com/https://tarot.howlcode.com/api/v1/cards"
+        "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards"
       )
       .then((res) => {
         console.log(res);

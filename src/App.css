@@ -175,7 +175,7 @@ p {
   margin-left: 2vh;
   border-radius: 5px;
   transform: rotate(-10deg);
-  z-index: -1;
+  z-index: 0;
 }
 
 #card-image-second {
@@ -210,16 +210,6 @@ p {
 }
 
 /***** Four Card */
-
-#card-image-first {
-  position: relative;
-  width: 81px;
-  margin-bottom: 0.4vh;
-  margin-left: 2vh;
-  border-radius: 5px;
-  transform: rotate(-10deg);
-  z-index: -1;
-}
 
 #card-image-arching {
   width: 100px;
