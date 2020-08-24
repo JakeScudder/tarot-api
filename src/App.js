@@ -8,59 +8,23 @@ import ThreeCard from "./components/ThreeCard";
 import FourCard from "./components/FourCard";
 import Nav from "./components/Nav";
 
-import axios from "axios";
+// import axios from "axios";
 import logo from "./galaxy.svg";
 import "./App.css";
+
+const tarotData = require("./tarotData.json");
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deck: null,
+      deck: tarotData,
     };
   }
 
   componentDidMount() {
-    //Trying to solve Cross Origin bugs ///Great way to attach a Script
-    // const script = document.createElement("script");
-    // script.crossOrigin = "anonymous";
-    // script.async = true;
-    // document.body.appendChild(script);
-
-    if (this.state.deck === null) {
-      this.fetchCards();
-    } else {
-      return console.log("deck loaded");
-    }
+    console.log(this.state.deck);
   }
-
-  fetchCards = () => {
-    //Only runs in local host at the moment
-    //Original functional deployment link "https://cors-anywhere.herokuapp.com/https://tarot.howlcode.com/api/v1/cards"
-
-    //Alternative fetch attempts: Works locally, not deployed
-    // "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards"
-
-    axios
-      .get(
-        "https://thingproxy.freeboard.io/fetch/https://tarot.howlcode.com/api/v1/cards",
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Cross-Origin-Resource-Policy": "cross-origin",
-          },
-        }
-      )
-      .then((res) => {
-        console.log(res);
-        this.setState({
-          deck: res.data,
-        });
-      })
-      .catch((error) => {
-        console.log("Error fetching the cards:", error);
-      });
-  };
 
   render() {
     return (
