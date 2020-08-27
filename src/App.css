@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin-bottom: 0px;
 }
 
 .App {
@@ -13,7 +14,7 @@
   margin-bottom: 10px;
   height: 15vmin;
   pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 45s linear;
 }
 
 .App-logo-filler {
@@ -21,12 +22,12 @@
   margin-bottom: 10px;
   height: 60vmin;
   pointer-events: none;
-  animation: App-logo-spin-filler infinite 20s linear;
+  animation: App-logo-spin-filler infinite 30s linear;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 45s linear;
   }
 }
 
@@ -38,6 +39,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#app-name-h1 {
+  margin-bottom: 15px;
+  font-size: 32px;
 }
 
 .App-link {
@@ -57,17 +63,17 @@
 @keyframes App-logo-spin-filler {
   0% {
     transform: rotate(0deg);
-    opacity: 0;
+    opacity: 0.25;
   }
   50% {
     transform: rotate(180deg);
     opacity: 1;
-    filter: invert(54%) sepia(41%) saturate(2100%) hue-rotate(171deg)
+    filter: invert(10%) sepia(41%) saturate(700%) hue-rotate(95deg)
       brightness(87%) contrast(96%);
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
+    opacity: 0.25;
   }
 }
 
@@ -121,6 +127,7 @@ p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 2em;
 }
 
 .secondary {
@@ -146,7 +153,6 @@ p {
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff91;
 }
 
 #hide-description {
@@ -154,6 +160,7 @@ p {
   margin-top: 25px;
   width: 150px;
   height: 45px;
+  border-radius: 10px;
 }
 
 #footer-homepage {
@@ -286,6 +293,7 @@ p {
   #refresh {
     width: 100px;
     height: 75px;
+    padding-bottom: 1.4em;
   }
 
   #refresh h3 {

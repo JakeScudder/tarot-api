@@ -32,8 +32,8 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1>
-              Draw Your <span className="secondary">Hand</span>
+            <h1 id="app-name-h1">
+              The <span className="secondary">Tarot</span>
             </h1>
             <h1>How Many Cards?</h1>
             <Nav />
