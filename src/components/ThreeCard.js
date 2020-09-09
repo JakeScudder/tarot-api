@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class ThreeCard extends Component {
   constructor(props) {
@@ -114,8 +115,8 @@ class ThreeCard extends Component {
       return (
         <div id="three-card-container">
           <div id="title-help-container">
-            <button id="refresh" onClick={this.refresh}>
-              <h3 className="refresh-title">Draw</h3>
+            <button className="refresh" onClick={this.refresh}>
+              <h3 className="refresh-title first">Draw</h3>
               <h3 className="refresh-title">Again</h3>
             </button>
             <h1 className="you-drew">You Drew</h1>
@@ -162,6 +163,13 @@ class ThreeCard extends Component {
               <h2 className="name-title">Future: {cardName3}</h2>
               <img className="threecard-image" alt="Card" src={image3} />
               <h4 className="summary">{cardSummary3}</h4>
+            </div>
+            <div id="go-home-div">
+              <button className="go-home">
+                <NavLink to="/">
+                  <h3 className="home-h3">Go Home</h3>
+                </NavLink>
+              </button>
             </div>
           </div>
         </div>

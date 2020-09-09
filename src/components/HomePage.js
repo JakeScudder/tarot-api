@@ -34,9 +34,7 @@ class HomePage extends Component {
 
     return (
       <div id="homepage-div">
-        <div id="title-help-container">
-          <h1>What Awaits?</h1>
-        </div>
+        <div id="title-help-container"></div>
         {showing ? (
           <div>
             <p>
@@ -44,16 +42,17 @@ class HomePage extends Component {
               introduction:
             </p>
             <p>
-              Decide if you want to draw 1, 3, or 4 cards. Some people use two
-              card readings, but the books I have read did not include it.
+              To start off, don't take the cards too literally. Try to delve
+              into their imagery and how they relate to your feelings or
+              insecurities.
+            </p>
+            <p>
+              The guidebooks I read did not include 2 cards so that was not
+              included.
             </p>
             <p>
               Try to frame a question or situation in your head. When you draw
               the cards, see how they relate to what you had in mind.
-            </p>
-            <p>
-              Don't take the cards too literally, try to delve into their
-              imagery and how they relate to your feelings or insecurities.
             </p>
             <p>
               If you receive a 'bad' card, review your attachments to the issue.

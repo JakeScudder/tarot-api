@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class OneCard extends Component {
   constructor(props) {
@@ -63,8 +64,8 @@ class OneCard extends Component {
       return (
         <div id="one-card-container">
           <div id="title-help-container">
-            <button id="refresh" onClick={this.refresh}>
-              <h3 className="refresh-title">Draw</h3>
+            <button className="refresh" onClick={this.refresh}>
+              <h3 className="refresh-title first">Draw</h3>
               <h3 className="refresh-title">Again</h3>
             </button>
             <h3>You Drew</h3>
@@ -77,11 +78,11 @@ class OneCard extends Component {
               <h3 className="daily-help-title">Daily Reading</h3>
               <p>
                 A simple reading, take a moment to think about what might be the
-                focus for your day
+                focus for your day.
               </p>
               <p>
                 To emphasize, try not to be to literal. Look at the imagery and
-                search for the metaphors
+                search for the metaphors.
               </p>
               <p>
                 For example, the Death card could be a reminder that there is a
@@ -93,6 +94,13 @@ class OneCard extends Component {
             <h2 className="name-title-one">{cardName}</h2>
             <img className="card-image" alt="Card" src={image} />
             <h4 className="summary">{cardSummary}</h4>
+          </div>
+          <div id="go-home-div">
+            <button className="go-home">
+              <NavLink to="/">
+                <h3 className="home-h3">Go Home</h3>
+              </NavLink>
+            </button>
           </div>
         </div>
       );

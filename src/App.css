@@ -43,7 +43,7 @@
 
 #app-name-h1 {
   margin-bottom: 15px;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .App-link {
@@ -93,26 +93,65 @@ h3 {
 }
 
 /******* Help */
-#refresh {
+.refresh {
   align-items: center;
   justify-content: center;
   float: left;
-  width: 45px;
+  width: 52px;
+  height: 52px;
+  border: 3px solid black;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 2px;
+}
+
+#go-home-div {
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  margin-right: 7px;
+}
+
+.go-home {
+  align-items: center;
+  justify-content: center;
+  float: right;
+  width: 90px;
   height: 45px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px;
+}
+
+.home-h3 {
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  margin-block-start: 0;
+}
+
+.refresh-title.first {
+  margin-top: -2px;
 }
 
 .refresh-title {
   display: block;
   margin-left: -5px;
-  font-size: 10px;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 5px;
 }
 
 #help-button {
   font-size: 26px;
+  font-weight: 700;
   float: right;
-  width: 45px;
-  height: 45px;
+  width: 52px;
+  height: 52px;
+  border: 3px solid black;
+  border-bottom-left-radius: 10px;
+  box-shadow: 2px 2px;
 }
 
 .daily-help-title {
@@ -121,10 +160,18 @@ h3 {
 
 p {
   margin-bottom: -10px;
+  text-align: justify;
+  text-indent: 10px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-bottom: 3px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .summary {
   width: 90%;
+  text-align: justify;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2em;
@@ -156,11 +203,15 @@ p {
 }
 
 #hide-description {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 700;
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
   width: 150px;
   height: 45px;
   border-radius: 10px;
+  border: 3px solid black;
 }
 
 #footer-homepage {
@@ -170,7 +221,7 @@ p {
 
 /***** Three Card */
 .card-container {
-  width: 75%;
+  width: 92%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
@@ -205,7 +256,13 @@ p {
 
 .name-title {
   border-top: 5px solid black;
+  padding-top: 0.5em;
 }
+
+.name-title-one {
+  margin-bottom: 15px;
+}
+
 .threecard-summary {
   width: 90%;
   margin-left: auto;
@@ -214,12 +271,13 @@ p {
 
 .threecard-image {
   width: 250px;
+  margin-top: 20px;
 }
 
 /***** Four Card */
 
 #card-image-arching {
-  width: 100px;
+  width: 110px;
   display: block;
   margin-top: 25px;
   margin-left: auto;
@@ -254,7 +312,7 @@ p {
   display: table;
   margin-right: 10px;
   margin-bottom: 15px;
-  border: 2px solid white;
+  border: 3px solid black;
   border-radius: 5px;
   background-color: grey;
   width: 50px;
@@ -265,9 +323,11 @@ p {
 .nav-li a {
   display: table-cell;
   vertical-align: middle;
+  font-size: 16px;
+  font-weight: 700;
   padding: 10px 10px;
   text-decoration: none;
-  color: rgb(16, 108, 189);
+  color: black;
 }
 
 /* For Tablet */

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class FourCard extends Component {
   constructor(props) {
@@ -122,9 +123,9 @@ class FourCard extends Component {
     if (card1 !== null) {
       return (
         <div id="four-card-container">
-          <button id="refresh" onClick={this.refresh}>
-            <h3 className="refresh-title">Draw</h3>
-            <h3 className="refresh-title">Another</h3>
+          <button className="refresh" onClick={this.refresh}>
+            <h3 className="refresh-title first">Draw</h3>
+            <h3 className="refresh-title">Again</h3>
           </button>
           <h1 className="you-drew">You Drew</h1>
           <button id="help-button" onClick={this.toggle}>
@@ -177,6 +178,13 @@ class FourCard extends Component {
             <h2 className="name-title">{cardName3}</h2>
             <img className="threecard-image" alt="Card" src={image3} />
             <h4 className="summary">{cardSummary3}</h4>
+          </div>
+          <div id="go-home-div">
+            <button className="go-home">
+              <NavLink to="/">
+                <h3 className="home-h3">Go Home</h3>
+              </NavLink>
+            </button>
           </div>
         </div>
       );
