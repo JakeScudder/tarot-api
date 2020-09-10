@@ -7,6 +7,7 @@ import OneCard from "./components/OneCard";
 import ThreeCard from "./components/ThreeCard";
 import FourCard from "./components/FourCard";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 // import axios from "axios";
 import logo from "./galaxy.svg";
@@ -60,6 +61,7 @@ class App extends Component {
               <HomePage />
             </Route>
           </Switch>
+          <Footer />
         </div>
       </HashRouter>
     );

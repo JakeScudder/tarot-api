@@ -107,7 +107,6 @@ h3 {
 #go-home-div {
   overflow: hidden;
   padding-bottom: 10px;
-  margin-bottom: 18px;
   margin-right: 7px;
 }
 
@@ -198,8 +197,10 @@ p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 7px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 #hide-description {
@@ -237,7 +238,7 @@ p {
 }
 
 #card-image-second {
-  margin-bottom: 1.5vh;
+  margin-bottom: 0.9vh;
   margin-left: -3vh;
   position: relative;
   width: 82px;
@@ -330,6 +331,35 @@ p {
   color: black;
 }
 
+/* Footer */
+
+#footer {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2a85c5;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer-ul {
+  display: inline-block;
+  padding: 0;
+  margin: 7px;
+}
+
+.footer-li {
+  display: inline-block;
+}
+
+.footer-li.first {
+  margin-right: 15px;
+}
+
 /* For Tablet */
 @media screen and (min-width: 700px) {
   .App-logo-filler {
@@ -350,13 +380,13 @@ p {
 
   /* Buttons */
 
-  #refresh {
+  .refresh {
     width: 100px;
     height: 75px;
     padding-bottom: 1.4em;
   }
 
-  #refresh h3 {
+  .refresh h3 {
     font-size: 22px;
     margin-left: 0px;
   }
