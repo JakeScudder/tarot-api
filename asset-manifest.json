@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/tarot-api/static/css/main.becdcf4d.chunk.css",
-    "main.js": "/tarot-api/static/js/main.e4fe1375.chunk.js",
-    "main.js.map": "/tarot-api/static/js/main.e4fe1375.chunk.js.map",
+    "main.css": "/tarot-api/static/css/main.ef444e65.chunk.css",
+    "main.js": "/tarot-api/static/js/main.8551edcb.chunk.js",
+    "main.js.map": "/tarot-api/static/js/main.8551edcb.chunk.js.map",
     "runtime-main.js": "/tarot-api/static/js/runtime-main.a59d030a.js",
     "runtime-main.js.map": "/tarot-api/static/js/runtime-main.a59d030a.js.map",
-    "static/js/2.60f4a0fe.chunk.js": "/tarot-api/static/js/2.60f4a0fe.chunk.js",
-    "static/js/2.60f4a0fe.chunk.js.map": "/tarot-api/static/js/2.60f4a0fe.chunk.js.map",
+    "static/js/2.475e2912.chunk.js": "/tarot-api/static/js/2.475e2912.chunk.js",
+    "static/js/2.475e2912.chunk.js.map": "/tarot-api/static/js/2.475e2912.chunk.js.map",
     "index.html": "/tarot-api/index.html",
-    "precache-manifest.13da71a76326f889ab7cd04aff2c5582.js": "/tarot-api/precache-manifest.13da71a76326f889ab7cd04aff2c5582.js",
+    "precache-manifest.9114f116b530a9379550769835e5647c.js": "/tarot-api/precache-manifest.9114f116b530a9379550769835e5647c.js",
     "service-worker.js": "/tarot-api/service-worker.js",
-    "static/css/main.becdcf4d.chunk.css.map": "/tarot-api/static/css/main.becdcf4d.chunk.css.map",
-    "static/js/2.60f4a0fe.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.60f4a0fe.chunk.js.LICENSE.txt",
+    "static/css/main.ef444e65.chunk.css.map": "/tarot-api/static/css/main.ef444e65.chunk.css.map",
+    "static/js/2.475e2912.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.475e2912.chunk.js.LICENSE.txt",
     "static/media/galaxy-fill.svg": "/tarot-api/static/media/galaxy-fill.395dc514.svg",
     "static/media/galaxy.svg": "/tarot-api/static/media/galaxy.5346ee6a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a59d030a.js",
-    "static/js/2.60f4a0fe.chunk.js",
-    "static/css/main.becdcf4d.chunk.css",
-    "static/js/main.e4fe1375.chunk.js"
+    "static/js/2.475e2912.chunk.js",
+    "static/css/main.ef444e65.chunk.css",
+    "static/js/main.8551edcb.chunk.js"
   ]
 }
