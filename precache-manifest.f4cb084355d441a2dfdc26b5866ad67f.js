@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9774980c3445048df7e9227f35417695",
+    "revision": "2b58fb509c93d1b679ff32391d99f317",
     "url": "/tarot-api/index.html"
   },
   {
-    "revision": "f39c79d577e99165c5f3",
-    "url": "/tarot-api/static/css/main.ef444e65.chunk.css"
+    "revision": "2b6f07a85a28d9ed53e6",
+    "url": "/tarot-api/static/css/main.068b97f6.chunk.css"
   },
   {
-    "revision": "579739a8674f995a81ef",
-    "url": "/tarot-api/static/js/2.475e2912.chunk.js"
+    "revision": "1826058fdb974fac041d",
+    "url": "/tarot-api/static/js/2.bd6e296b.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/tarot-api/static/js/2.475e2912.chunk.js.LICENSE.txt"
+    "url": "/tarot-api/static/js/2.bd6e296b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f39c79d577e99165c5f3",
-    "url": "/tarot-api/static/js/main.8551edcb.chunk.js"
+    "revision": "2b6f07a85a28d9ed53e6",
+    "url": "/tarot-api/static/js/main.57d134d0.chunk.js"
   },
   {
     "revision": "b2a70cc6cf18f0bf0ad0",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5346ee6af73c0065653cbf4163baedd9",
     "url": "/tarot-api/static/media/galaxy.5346ee6a.svg"
+  },
+  {
+    "revision": "46db9bec8343b51b860319323738d912",
+    "url": "/tarot-api/static/media/rider-tarot-back.46db9bec.jpg"
   }
 ]);
