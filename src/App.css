@@ -6,6 +6,7 @@
 .App {
   text-align: center;
   min-height: 100vh;
+  position: relative;
   background-color: #5a9ac5cc;
 }
 
@@ -20,7 +21,7 @@
 .App-logo-filler {
   margin-top: 5%;
   margin-bottom: 10px;
-  height: 60vmin;
+  height: 50vmin;
   pointer-events: none;
   animation: App-logo-spin-filler infinite 30s linear;
 }
@@ -181,7 +182,7 @@ p {
 }
 
 .card-image {
-  width: 290px;
+  width: 260px;
   border-radius: 15px;
 }
 
@@ -197,7 +198,7 @@ p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 7px;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -220,12 +221,88 @@ p {
   display: flex;
 }
 
+/***** One Card */
+
+#one-card-container {
+  padding-bottom: 32px;
+}
+
+.card-image-back {
+  border-radius: 30px;
+  border-bottom-right-radius: 40px;
+}
+
+/* #one-card-loading {
+} */
+
+.card-image-back {
+  width: 260px;
+  animation: 2s fadeOut;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  35% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+}
+
+#one-card-result {
+  visibility: hidden;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+.card-image {
+  animation: 3s rotateCard;
+}
+
+@keyframes rotateCard {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 /***** Three Card */
 .card-container {
   width: 92%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
+  padding-bottom: 32px;
 }
 
 #card-image-first {
@@ -276,6 +353,10 @@ p {
 }
 
 /***** Four Card */
+
+#four-card-container {
+  padding-bottom: 32px;
+}
 
 #card-image-arching {
   width: 110px;
@@ -335,6 +416,9 @@ p {
 
 #footer {
   display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   text-decoration: none;
   background-color: #2a85c5;
   color: black;

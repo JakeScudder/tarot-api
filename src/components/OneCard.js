@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
+import TarotBack from "../rider-tarot-back.jpg";
+
 class OneCard extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,13 @@ class OneCard extends Component {
     this.setState({
       loading: false,
     });
+
+    setTimeout(this.hideLoadingCard, 1400);
   }
+
+  hideLoadingCard = () => {
+    document.getElementById("one-card-loading").style.display = "none";
+  };
 
   formatName = (name) => {
     return name
@@ -90,7 +98,20 @@ class OneCard extends Component {
               </p>
             </div>
           ) : null}
-          <div>
+          <div id="one-card-loading">
+            <h2 className="name-title-one">?</h2>
+            <img className="card-image-back" alt="Card" src={TarotBack} />
+            <h4 className="summary">
+              Elementum pulvinar etiam non quam lacus. Suspendisse potenti
+              nullam ac tortor vitae purus faucibus ornare suspendisse. Mauris
+              sit amet massa vitae tortor condimentum lacinia quis. Pulvinar
+              mattis nunc sed blandit libero volutpat. Quam viverra orci
+              sagittis eu volutpat odio facilisis. Dolor purus non enim praesent
+              elementum facilisis leo vel fringilla. Varius duis at consectetur
+              lorem donec massa sapien faucibus.{" "}
+            </h4>
+          </div>
+          <div id="one-card-result">
             <h2 className="name-title-one">{cardName}</h2>
             <img className="card-image" alt="Card" src={image} />
             <h4 className="summary">{cardSummary}</h4>
