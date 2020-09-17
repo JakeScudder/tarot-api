@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tarot-api/static/css/main.882e1fbf.chunk.css",
-    "main.js": "/tarot-api/static/js/main.57d134d0.chunk.js",
-    "main.js.map": "/tarot-api/static/js/main.57d134d0.chunk.js.map",
+    "main.css": "/tarot-api/static/css/main.cdc04960.chunk.css",
+    "main.js": "/tarot-api/static/js/main.b2833243.chunk.js",
+    "main.js.map": "/tarot-api/static/js/main.b2833243.chunk.js.map",
     "runtime-main.js": "/tarot-api/static/js/runtime-main.a59d030a.js",
     "runtime-main.js.map": "/tarot-api/static/js/runtime-main.a59d030a.js.map",
-    "static/js/2.bd6e296b.chunk.js": "/tarot-api/static/js/2.bd6e296b.chunk.js",
-    "static/js/2.bd6e296b.chunk.js.map": "/tarot-api/static/js/2.bd6e296b.chunk.js.map",
+    "static/js/2.ca7e4b5f.chunk.js": "/tarot-api/static/js/2.ca7e4b5f.chunk.js",
+    "static/js/2.ca7e4b5f.chunk.js.map": "/tarot-api/static/js/2.ca7e4b5f.chunk.js.map",
     "index.html": "/tarot-api/index.html",
-    "precache-manifest.caa709a8f8997ccdb53480d9fca2e74c.js": "/tarot-api/precache-manifest.caa709a8f8997ccdb53480d9fca2e74c.js",
+    "precache-manifest.14b3cc6398c6887cbf04b8be89d0e61b.js": "/tarot-api/precache-manifest.14b3cc6398c6887cbf04b8be89d0e61b.js",
     "service-worker.js": "/tarot-api/service-worker.js",
-    "static/css/main.882e1fbf.chunk.css.map": "/tarot-api/static/css/main.882e1fbf.chunk.css.map",
-    "static/js/2.bd6e296b.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.bd6e296b.chunk.js.LICENSE.txt",
+    "static/css/main.cdc04960.chunk.css.map": "/tarot-api/static/css/main.cdc04960.chunk.css.map",
+    "static/js/2.ca7e4b5f.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.ca7e4b5f.chunk.js.LICENSE.txt",
     "static/media/galaxy-fill.svg": "/tarot-api/static/media/galaxy-fill.395dc514.svg",
     "static/media/galaxy.svg": "/tarot-api/static/media/galaxy.5346ee6a.svg",
     "static/media/rider-tarot-back.jpg": "/tarot-api/static/media/rider-tarot-back.46db9bec.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a59d030a.js",
-    "static/js/2.bd6e296b.chunk.js",
-    "static/css/main.882e1fbf.chunk.css",
-    "static/js/main.57d134d0.chunk.js"
+    "static/js/2.ca7e4b5f.chunk.js",
+    "static/css/main.cdc04960.chunk.css",
+    "static/js/main.b2833243.chunk.js"
   ]
 }
