@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
+import TarotBack from "../rider-tarot-back.jpg";
+
 class ThreeCard extends Component {
   constructor(props) {
     super(props);
@@ -140,9 +142,42 @@ class ThreeCard extends Component {
           ) : null}
           <div className="card-container">
             <div className="cards-displayed">
-              <img id="card-image-first" alt="Card" src={image1} />
+              <div class="flip-card">
+                <div class="flip-card-inner one">
+                  <div class="flip-card-front">
+                    <img className="tarot-back" src={TarotBack} alt="Avatar" />
+                  </div>
+                  <div class="flip-card-back">
+                    <img id="card-image-first" src={image1} alt="tarot-card" />
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card2">
+                <div class="flip-card-inner two">
+                  <div class="flip-card-front">
+                    <img className="tarot-back" src={TarotBack} alt="Avatar" />
+                  </div>
+                  <div class="flip-card-back">
+                    <img id="card-image-second" src={image2} alt="tarot-card" />
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card3">
+                <div class="flip-card-inner three">
+                  <div class="flip-card-front">
+                    <img className="tarot-back" src={TarotBack} alt="Avatar" />
+                  </div>
+                  <div class="flip-card-back">
+                    <img id="card-image-third" src={image3} alt="tarot-card" />
+                  </div>
+                </div>
+              </div>
+
+              {/* <img id="card-image-first" alt="Card" src={image1} />
               <img id="card-image-second" alt="Card" src={image2} />
-              <img id="card-image-third" alt="Card" src={image3} />
+              <img id="card-image-third" alt="Card" src={image3} /> */}
+            </div>
+            <div>
               <h4>
                 {cardName1}, {cardName2}, {cardName3}
               </h4>
@@ -164,7 +199,7 @@ class ThreeCard extends Component {
               <img className="threecard-image" alt="Card" src={image3} />
               <h4 className="summary">{cardSummary3}</h4>
             </div>
-            <div id="go-home-div">
+            <div className="go-home-div three">
               <button className="go-home">
                 <NavLink to="/">
                   <h3 className="home-h3">Go Home</h3>

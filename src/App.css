@@ -10,7 +10,7 @@
   background-color: #5a9ac5cc;
 }
 
-.App-logo {
+#App-logo {
   margin-top: 5%;
   margin-bottom: 10px;
   height: 15vmin;
@@ -105,10 +105,14 @@ h3 {
   box-shadow: 1px 2px;
 }
 
-#go-home-div {
+.go-home-div {
   overflow: hidden;
   padding-bottom: 10px;
   margin-right: 7px;
+}
+
+.go-home-div.three {
+  padding-bottom: 40px;
 }
 
 .go-home {
@@ -181,14 +185,51 @@ p {
   color: black;
 }
 
-.card-image {
-  width: 260px;
+/***** One Card */
+
+.one-card-flip {
+  background-color: transparent;
+  width: 180px;
+  height: 312px;
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#card-image {
+  width: 180px;
+  border-radius: 15px;
+}
+
+.flip-card-front.one {
+  width: 180px;
+  height: 312px;
+  border-radius: 15px;
+}
+
+.flip-card-back.one {
+  width: 180px;
+  height: 312px;
+  border-radius: 15px;
+}
+
+.tarot-back.one {
+  width: 180px;
+  height: 312px;
   border-radius: 15px;
 }
 
 .card-image-preview {
   width: 100px;
   margin-top: 4vh;
+}
+
+.one-card-container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 32px;
+  margin-top: 30px;
 }
 
 /***** Homepage */
@@ -221,80 +262,99 @@ p {
   display: flex;
 }
 
-/***** One Card */
+/***** Flip Card Logic */
 
-#one-card-container {
-  padding-bottom: 32px;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 81px;
+  height: 148px;
+  perspective: 1000px;
+  transform: rotate(-10deg);
+  margin-top: 10px;
 }
 
-.card-image-back {
-  border-radius: 30px;
-  border-bottom-right-radius: 40px;
+.flip-card2 {
+  background-color: transparent;
+  width: 81px;
+  height: 148px;
+  perspective: 1000px;
 }
 
-/* #one-card-loading {
-} */
-
-.card-image-back {
-  width: 260px;
-  animation: 2s fadeOut;
-  animation-fill-mode: backwards;
+.flip-card3 {
+  background-color: transparent;
+  width: 81px;
+  height: 148px;
+  perspective: 1000px;
+  transform: rotate(10deg);
+  margin-top: 10px;
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-
-  25% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-
-  35% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-    transform: rotateY(180deg);
-  }
-}
-
-#one-card-result {
-  visibility: hidden;
-  animation: 1s fadeIn;
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  animation: 2.5s rotateThreeCard;
   animation-fill-mode: forwards;
 }
 
-.card-image {
-  animation: 3s rotateCard;
+.flip-card-inner.one {
+  animation-delay: 0.5s;
 }
 
-@keyframes rotateCard {
+.flip-card-inner.two {
+  animation-delay: 1.5s;
+}
+
+.flip-card-inner.three {
+  animation-delay: 2.5s;
+}
+
+@keyframes rotateThreeCard {
   0% {
     transform: rotate(0deg);
   }
 
   100% {
-    transform: rotateY(360deg);
+    transform: rotateY(-180deg);
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+.tarot-back {
+  width: 81px;
+  height: 148px;
+  border-radius: 5px;
 }
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+  width: 81px;
+  height: 148px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  width: 81px;
+  height: 148px;
+  transform: rotateY(180deg);
+}
+
+/***** One Card */
 
 /***** Three Card */
 .card-container {
@@ -302,21 +362,22 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
-  padding-bottom: 32px;
+}
+
+.cards-displayed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #card-image-first {
   position: relative;
   width: 81px;
-  margin-left: 2vh;
   border-radius: 5px;
-  transform: rotate(-10deg);
   z-index: 0;
 }
 
 #card-image-second {
-  margin-bottom: 0.9vh;
-  margin-left: -3vh;
   position: relative;
   width: 82px;
   border-radius: 5px;
@@ -324,11 +385,8 @@ p {
 }
 #card-image-third {
   position: relative;
-  margin-left: -3vh;
-  margin-bottom: -0.3vh;
   width: 82px;
   border-radius: 5px;
-  transform: rotate(10deg);
   z-index: 1;
 }
 
@@ -354,23 +412,79 @@ p {
 
 /***** Four Card */
 
+#overarching-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.flip-card-inner.four.first {
+  animation-delay: 0.5s;
+}
+.flip-card-inner.four.second {
+  animation-delay: 1.5s;
+}
+.flip-card-inner.four.third {
+  animation-delay: 2.5s;
+}
+.flip-card-inner.four.fourth {
+  animation-delay: 3.5s;
+}
+
+.flip-card-front.four {
+  width: 100px;
+  height: 175px;
+}
+
+.flip-card-back.four {
+  width: 100px;
+  height: 175px;
+}
+
+.tarot-back.four {
+  width: 100px;
+  height: 175px;
+}
+
+#four-card-image-first {
+  width: 100px;
+  height: 175px;
+  border-radius: 5px;
+}
+#four-card-image-second {
+  width: 100px;
+  height: 175px;
+  border-radius: 5px;
+}
+#four-card-image-third {
+  width: 100px;
+  height: 175px;
+  border-radius: 5px;
+}
+
+.four-flip-card {
+  background-color: transparent;
+  width: 100px;
+  height: 175px;
+  perspective: 1000px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #four-card-container {
   padding-bottom: 32px;
 }
 
 #card-image-arching {
-  width: 110px;
-  display: block;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
+  width: 100px;
   border-radius: 5px;
 }
 
 #overarching-title {
-  margin-top: -20px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Nav Bar */
@@ -445,9 +559,15 @@ p {
 }
 
 /* For Tablet */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .App-logo-filler {
     height: 30vmin;
+  }
+
+  #four-card-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #one-card-container {
@@ -460,6 +580,51 @@ p {
     width: 72.5%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .flip-card {
+    width: 125px;
+    height: 235px;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+
+  .flip-card2 {
+    margin-right: 20px;
+    width: 125px;
+    height: 235px;
+  }
+
+  .flip-card3 {
+    width: 125px;
+    height: 235px;
+    margin-top: 15px;
+  }
+
+  .tarot-back {
+    width: 125px;
+    height: 235px;
+  }
+
+  .flip-card-back {
+    width: 125px;
+    height: 235px;
+  }
+
+  .flip-card-front {
+    width: 125px;
+    height: 235px;
+  }
+  #card-image-first {
+    width: 125px;
+    margin-right: 10px;
+  }
+  #card-image-second {
+    width: 125px;
+    margin-right: 10px;
+  }
+  #card-image-third {
+    width: 125px;
   }
 
   /* Buttons */
@@ -494,6 +659,48 @@ p {
     width: 62.5%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #four-card-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .four-flip-card {
+    width: 140px;
+    height: 260px;
+  }
+
+  .flip-card-front.four {
+    width: 140px;
+    height: 260px;
+  }
+
+  .tarot-back.four {
+    width: 140px;
+    height: 260px;
+  }
+
+  .flip-card-back.four {
+    width: 140px;
+    height: 260px;
+  }
+
+  #four-card-image-first {
+    width: 140px;
+    height: 260px;
+  }
+  #four-card-image-second {
+    width: 140px;
+    height: 260px;
+  }
+  #four-card-image-third {
+    width: 140px;
+    height: 260px;
+  }
+  #underarching-titles h4 {
+    font-size: 24px;
   }
 
   /* Multiple card sizing*/

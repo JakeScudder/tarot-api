@@ -14,16 +14,15 @@ class OneCard extends Component {
   }
 
   componentDidMount() {
+    setTimeout(this.hideGalaxy, 500);
     this.randomNumGeneration();
     this.setState({
       loading: false,
     });
-
-    setTimeout(this.hideLoadingCard, 1400);
   }
 
-  hideLoadingCard = () => {
-    document.getElementById("one-card-loading").style.display = "none";
+  hideGalaxy = () => {
+    document.getElementById("App-logo").style.display = "none";
   };
 
   formatName = (name) => {
@@ -81,47 +80,49 @@ class OneCard extends Component {
               ?
             </button>
           </div>
-          {showing ? (
-            <div>
-              <h3 className="daily-help-title">Daily Reading</h3>
-              <p>
-                A simple reading, take a moment to think about what might be the
-                focus for your day.
-              </p>
-              <p>
-                To emphasize, try not to be to literal. Look at the imagery and
-                search for the metaphors.
-              </p>
-              <p>
-                For example, the Death card could be a reminder that there is a
-                situation or relationship you should put behind you.
-              </p>
+          <div className="one-card-container-div">
+            {showing ? (
+              <div>
+                <h3 className="daily-help-title">Daily Reading</h3>
+                <p>
+                  A simple reading, take a moment to think about what might be
+                  the focus for your day.
+                </p>
+                <p>
+                  To emphasize, try not to be to literal. Look at the imagery
+                  and search for the metaphors.
+                </p>
+                <p>
+                  For example, the Death card could be a reminder that there is
+                  a situation or relationship you should put behind you.
+                </p>
+              </div>
+            ) : null}
+            <div class="one-card-flip">
+              <div class="flip-card-inner one">
+                <div class="flip-card-front one">
+                  <img
+                    className="tarot-back one"
+                    src={TarotBack}
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="flip-card-back one">
+                  <img id="card-image" src={image} alt="tarot-card" />
+                </div>
+              </div>
             </div>
-          ) : null}
-          <div id="one-card-loading">
-            <h2 className="name-title-one">?</h2>
-            <img className="card-image-back" alt="Card" src={TarotBack} />
-            <h4 className="summary">
-              Elementum pulvinar etiam non quam lacus. Suspendisse potenti
-              nullam ac tortor vitae purus faucibus ornare suspendisse. Mauris
-              sit amet massa vitae tortor condimentum lacinia quis. Pulvinar
-              mattis nunc sed blandit libero volutpat. Quam viverra orci
-              sagittis eu volutpat odio facilisis. Dolor purus non enim praesent
-              elementum facilisis leo vel fringilla. Varius duis at consectetur
-              lorem donec massa sapien faucibus.{" "}
-            </h4>
-          </div>
-          <div id="one-card-result">
-            <h2 className="name-title-one">{cardName}</h2>
-            <img className="card-image" alt="Card" src={image} />
-            <h4 className="summary">{cardSummary}</h4>
-          </div>
-          <div id="go-home-div">
-            <button className="go-home">
-              <NavLink to="/">
-                <h3 className="home-h3">Go Home</h3>
-              </NavLink>
-            </button>
+            <div id="one-card-result">
+              <h2 className="name-title-one">{cardName}</h2>
+              <h4 className="summary">{cardSummary}</h4>
+            </div>
+            <div className="go-home-div">
+              <button className="go-home">
+                <NavLink to="/">
+                  <h3 className="home-h3">Go Home</h3>
+                </NavLink>
+              </button>
+            </div>
           </div>
         </div>
       );

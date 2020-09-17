@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
+import TarotBack from "../rider-tarot-back.jpg";
+
 class FourCard extends Component {
   constructor(props) {
     super(props);
@@ -146,17 +148,74 @@ class FourCard extends Component {
             </div>
           ) : null}
           <div id="overarching-card">
-            <img id="card-image-arching" alt="Card" src={image4} />
-            <h2 id="overarching-title">{cardName4}</h2>
+            <div class="four-flip-card">
+              <div class="flip-card-inner four first">
+                <div class="flip-card-front four">
+                  <img
+                    className="tarot-back four"
+                    src={TarotBack}
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="flip-card-back four">
+                  <img id="card-image-arching" alt="Card" src={image4} />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 id="overarching-title">{cardName4}</h2>
+            </div>
           </div>
           <div className="cards-displayed">
-            <img id="card-image-first" alt="Card" src={image1} />
-            <img id="card-image-second" alt="Card" src={image2} />
-            <img id="card-image-third" alt="Card" src={image3} />
+            <div class="four-flip-card">
+              <div class="flip-card-inner four second">
+                <div class="flip-card-front four">
+                  <img
+                    className="tarot-back four"
+                    src={TarotBack}
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="flip-card-back four">
+                  <img id="four-card-image-first" alt="Card" src={image1} />
+                </div>
+              </div>
+            </div>
+            <div class="four-flip-card">
+              <div class="flip-card-inner four third">
+                <div class="flip-card-front four">
+                  <img
+                    className="tarot-back four"
+                    src={TarotBack}
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="flip-card-back four">
+                  <img id="four-card-image-second" alt="Card" src={image2} />
+                </div>
+              </div>
+            </div>
+            <div class="four-flip-card">
+              <div class="flip-card-inner four fourth">
+                <div class="flip-card-front four">
+                  <img
+                    className="tarot-back four"
+                    src={TarotBack}
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="flip-card-back four">
+                  <img id="four-card-image-third" alt="Card" src={image3} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="underarching-titles">
             <h4>
               {cardName1}, {cardName2}, {cardName3}
             </h4>
           </div>
+
           <div className="threecard-summary">
             {/* Card 4 */}
             <h2 className="name-title">OverArching Card:</h2>
@@ -179,7 +238,7 @@ class FourCard extends Component {
             <img className="threecard-image" alt="Card" src={image3} />
             <h4 className="summary">{cardSummary3}</h4>
           </div>
-          <div id="go-home-div">
+          <div className="go-home-div">
             <button className="go-home">
               <NavLink to="/">
                 <h3 className="home-h3">Go Home</h3>

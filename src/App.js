@@ -32,7 +32,7 @@ class App extends Component {
       <HashRouter>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} id="App-logo" alt="logo" />
             <h1 id="app-name-h1">
               The <span className="secondary">Tarot</span>
             </h1>
