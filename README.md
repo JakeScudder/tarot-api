@@ -1,6 +1,6 @@
 <div align="center">
 
-<img margin-left="auto" margin-right="auto" src="/src/tarot-screen.png" height="450">
+<img margin-left="auto" margin-right="auto" src="/src/tarot-screen.png" height="300">
 </img>
 
 ## Tarot Card App // React
