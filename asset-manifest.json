@@ -1,25 +1,23 @@
 {
   "files": {
-    "main.css": "/tarot-api/static/css/main.cdc04960.chunk.css",
-    "main.js": "/tarot-api/static/js/main.b2833243.chunk.js",
-    "main.js.map": "/tarot-api/static/js/main.b2833243.chunk.js.map",
-    "runtime-main.js": "/tarot-api/static/js/runtime-main.a59d030a.js",
-    "runtime-main.js.map": "/tarot-api/static/js/runtime-main.a59d030a.js.map",
-    "static/js/2.ca7e4b5f.chunk.js": "/tarot-api/static/js/2.ca7e4b5f.chunk.js",
-    "static/js/2.ca7e4b5f.chunk.js.map": "/tarot-api/static/js/2.ca7e4b5f.chunk.js.map",
+    "main.css": "/tarot-api/static/css/main.cecc77c4.chunk.css",
+    "main.js": "/tarot-api/static/js/main.82cde097.chunk.js",
+    "main.js.map": "/tarot-api/static/js/main.82cde097.chunk.js.map",
+    "runtime-main.js": "/tarot-api/static/js/runtime-main.29356f7e.js",
+    "runtime-main.js.map": "/tarot-api/static/js/runtime-main.29356f7e.js.map",
+    "static/js/2.d1fdfbc5.chunk.js": "/tarot-api/static/js/2.d1fdfbc5.chunk.js",
+    "static/js/2.d1fdfbc5.chunk.js.map": "/tarot-api/static/js/2.d1fdfbc5.chunk.js.map",
     "index.html": "/tarot-api/index.html",
-    "precache-manifest.14b3cc6398c6887cbf04b8be89d0e61b.js": "/tarot-api/precache-manifest.14b3cc6398c6887cbf04b8be89d0e61b.js",
-    "service-worker.js": "/tarot-api/service-worker.js",
-    "static/css/main.cdc04960.chunk.css.map": "/tarot-api/static/css/main.cdc04960.chunk.css.map",
-    "static/js/2.ca7e4b5f.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.ca7e4b5f.chunk.js.LICENSE.txt",
-    "static/media/galaxy-fill.svg": "/tarot-api/static/media/galaxy-fill.395dc514.svg",
-    "static/media/galaxy.svg": "/tarot-api/static/media/galaxy.5346ee6a.svg",
-    "static/media/rider-tarot-back.jpg": "/tarot-api/static/media/rider-tarot-back.46db9bec.jpg"
+    "static/css/main.cecc77c4.chunk.css.map": "/tarot-api/static/css/main.cecc77c4.chunk.css.map",
+    "static/js/2.d1fdfbc5.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.d1fdfbc5.chunk.js.LICENSE.txt",
+    "static/media/galaxy-fill.a1fb1a55.svg": "/tarot-api/static/media/galaxy-fill.a1fb1a55.svg",
+    "static/media/galaxy.39e03ded.svg": "/tarot-api/static/media/galaxy.39e03ded.svg",
+    "static/media/rider-tarot-back.7a2fa791.jpg": "/tarot-api/static/media/rider-tarot-back.7a2fa791.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a59d030a.js",
-    "static/js/2.ca7e4b5f.chunk.js",
-    "static/css/main.cdc04960.chunk.css",
-    "static/js/main.b2833243.chunk.js"
+    "static/js/runtime-main.29356f7e.js",
+    "static/js/2.d1fdfbc5.chunk.js",
+    "static/css/main.cecc77c4.chunk.css",
+    "static/js/main.82cde097.chunk.js"
   ]
 }
