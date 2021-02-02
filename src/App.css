@@ -3,6 +3,14 @@
   margin-bottom: 0px;
 }
 
+img {
+  -webkit-transform: translateZ(0);
+}
+
+html {
+  height: 100%;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -11,7 +19,7 @@
 }
 
 #App-logo {
-  margin-top: 5%;
+  margin-top: 25px;
   margin-bottom: 10px;
   height: 15vmin;
   pointer-events: none;
@@ -43,8 +51,8 @@
 }
 
 #app-name-h1 {
-  margin-bottom: 15px;
-  font-size: 36px;
+  margin-bottom: 10px;
+  font-size: 32px;
 }
 
 .App-link {
@@ -64,7 +72,7 @@
 @keyframes App-logo-spin-filler {
   0% {
     transform: rotate(0deg);
-    opacity: 0.25;
+    opacity: 0.5;
   }
   50% {
     transform: rotate(180deg);
@@ -74,7 +82,7 @@
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0.25;
+    opacity: 0.5;
   }
 }
 
@@ -103,6 +111,7 @@ h3 {
   border: 3px solid black;
   border-bottom-right-radius: 10px;
   box-shadow: 1px 2px;
+  outline: none;
 }
 
 .go-home-div {
@@ -156,6 +165,7 @@ h3 {
   border: 3px solid black;
   border-bottom-left-radius: 10px;
   box-shadow: 2px 2px;
+  outline: none;
 }
 
 .daily-help-title {
@@ -168,7 +178,8 @@ p {
   text-indent: 10px;
   padding-left: 7.5px;
   padding-right: 7.5px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border: 2px solid black;
   border-radius: 10px;
 }
@@ -249,12 +260,14 @@ p {
   font-size: 20px;
   font-weight: 700;
   margin-top: 25px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  width: 150px;
-  height: 45px;
+  width: 135px;
+  height: 35px;
   border-radius: 10px;
   border: 3px solid black;
+  outline: none;
 }
 
 #footer-homepage {
@@ -271,7 +284,7 @@ p {
   height: 148px;
   perspective: 1000px;
   transform: rotate(-10deg);
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .flip-card2 {
@@ -345,6 +358,7 @@ p {
   color: black;
   width: 81px;
   height: 148px;
+  box-shadow: 2px 2px 2px;
 }
 
 /* Style the back side */
@@ -352,9 +366,14 @@ p {
   width: 81px;
   height: 148px;
   transform: rotateY(180deg);
+  box-shadow: 5px 5px 5px;
 }
 
 /***** One Card */
+
+.one-card-help-info {
+  margin-bottom: 30px;
+}
 
 /***** Three Card */
 .card-container {
@@ -408,6 +427,8 @@ p {
 .threecard-image {
   width: 250px;
   margin-top: 20px;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
 }
 
 /***** Four Card */
@@ -485,6 +506,10 @@ p {
 #overarching-title {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.four-card-help-info {
+  margin-bottom: 30px;
 }
 
 /* Nav Bar */
@@ -586,7 +611,7 @@ p {
     width: 125px;
     height: 235px;
     margin-right: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .flip-card2 {
@@ -615,19 +640,28 @@ p {
     width: 125px;
     height: 235px;
   }
+  /* Three Card */
   #card-image-first {
     width: 125px;
+    height: 235px;
     margin-right: 10px;
   }
   #card-image-second {
     width: 125px;
+    height: 235px;
     margin-right: 10px;
   }
   #card-image-third {
+    height: 235px;
     width: 125px;
   }
 
   /* Buttons */
+
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
   .refresh {
     width: 100px;
@@ -648,7 +682,11 @@ p {
 }
 
 /* For Large Screens */
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1100px) {
+  .App-logo-filler {
+    height: 40vmin;
+  }
+
   #one-card-container {
     width: 62.5%;
     margin-left: auto;
@@ -707,16 +745,21 @@ p {
 
   #card-image-arching {
     width: 140px;
+    height: 260px;
   }
+  /* Three card sizing*/
+  /* 
   #card-image-first {
-    width: 120px;
+    width: 125px;
+    height: 235px;
   }
   #card-image-second {
-    width: 120px;
+    width: 125px;
+    height: 235px
   }
   #card-image-third {
-    width: 120px;
-  }
+    width: 125px;
+  } */
 
   #four-card-container {
     width: 62.5%;

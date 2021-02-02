@@ -82,7 +82,7 @@ class OneCard extends Component {
           </div>
           <div className="one-card-container-div">
             {showing ? (
-              <div>
+              <div className="one-card-help-info">
                 <h3 className="daily-help-title">Daily Reading</h3>
                 <p>
                   A simple reading, take a moment to think about what might be

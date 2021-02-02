@@ -134,7 +134,7 @@ class FourCard extends Component {
             ?
           </button>
           {showing ? (
-            <div>
+            <div className="four-card-help-info">
               <h2>Over and Under</h2>
               <p>
                 This four card spread contains one card that represents the
