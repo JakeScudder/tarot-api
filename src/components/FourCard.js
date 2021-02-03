@@ -158,7 +158,7 @@ class FourCard extends Component {
                   />
                 </div>
                 <div class="flip-card-back four">
-                  <img id="card-image-arching" alt="Card" src={image4} />
+                  <img className="four-card-image" alt="Card" src={image4} />
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@ class FourCard extends Component {
                   />
                 </div>
                 <div class="flip-card-back four">
-                  <img id="four-card-image-first" alt="Card" src={image1} />
+                  <img className="four-card-image" alt="Card" src={image1} />
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ class FourCard extends Component {
                   />
                 </div>
                 <div class="flip-card-back four">
-                  <img id="four-card-image-second" alt="Card" src={image2} />
+                  <img className="four-card-image" alt="Card" src={image2} />
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ class FourCard extends Component {
                   />
                 </div>
                 <div class="flip-card-back four">
-                  <img id="four-card-image-third" alt="Card" src={image3} />
+                  <img className="four-card-image" alt="Card" src={image3} />
                 </div>
               </div>
             </div>

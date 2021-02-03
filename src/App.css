@@ -210,6 +210,8 @@ p {
 #card-image {
   width: 180px;
   border-radius: 15px;
+  height: 312px;
+  border: 5px solid rgb(185 180 168);
 }
 
 .flip-card-front.one {
@@ -367,6 +369,7 @@ p {
   height: 148px;
   transform: rotateY(180deg);
   box-shadow: 5px 5px 5px;
+  border-radius: 5px;
 }
 
 /***** One Card */
@@ -387,26 +390,33 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 30px;
 }
 
 #card-image-first {
   position: relative;
   width: 81px;
+  min-height: 148px;
   border-radius: 5px;
   z-index: 0;
+  border: 3px solid rgb(185 180 168);
 }
 
 #card-image-second {
   position: relative;
   width: 82px;
+  min-height: 148px;
   border-radius: 5px;
   z-index: 0;
+  border: 3px solid rgb(185 180 168);
 }
 #card-image-third {
   position: relative;
   width: 82px;
+  min-height: 148px;
   border-radius: 5px;
   z-index: 1;
+  border: 3px solid rgb(185 180 168);
 }
 
 .name-title {
@@ -429,6 +439,7 @@ p {
   margin-top: 20px;
   box-shadow: 5px 5px 5px;
   border-radius: 5px;
+  border: 10px solid rgb(185 180 168);
 }
 
 /***** Four Card */
@@ -468,20 +479,11 @@ p {
   height: 175px;
 }
 
-#four-card-image-first {
+.four-card-image {
   width: 100px;
   height: 175px;
   border-radius: 5px;
-}
-#four-card-image-second {
-  width: 100px;
-  height: 175px;
-  border-radius: 5px;
-}
-#four-card-image-third {
-  width: 100px;
-  height: 175px;
-  border-radius: 5px;
+  border: 3px solid rgb(185 180 168);
 }
 
 .four-flip-card {
@@ -489,18 +491,12 @@ p {
   width: 100px;
   height: 175px;
   perspective: 1000px;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #four-card-container {
   padding-bottom: 32px;
-}
-
-#card-image-arching {
-  width: 100px;
-  border-radius: 5px;
 }
 
 #overarching-title {
@@ -640,7 +636,9 @@ p {
     width: 125px;
     height: 235px;
   }
+
   /* Three Card */
+
   #card-image-first {
     width: 125px;
     height: 235px;
@@ -747,19 +745,19 @@ p {
     width: 140px;
     height: 260px;
   }
+
   /* Three card sizing*/
-  /* 
   #card-image-first {
     width: 125px;
     height: 235px;
   }
   #card-image-second {
     width: 125px;
-    height: 235px
+    height: 235px;
   }
   #card-image-third {
     width: 125px;
-  } */
+  }
 
   #four-card-container {
     width: 62.5%;
