@@ -723,6 +723,11 @@ p {
     height: 260px;
   }
 
+  .four-card-image {
+    width: 140px;
+    height: 260px;
+  }
+
   #four-card-image-first {
     width: 140px;
     height: 260px;
