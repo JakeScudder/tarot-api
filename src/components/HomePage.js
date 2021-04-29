@@ -11,6 +11,14 @@ class HomePage extends Component {
     };
   }
 
+  componentDidMount() {
+    this.showGalaxy();
+  }
+
+  showGalaxy = () => {
+    document.getElementById("App-logo").style.display = "block";
+  };
+
   //Toggle handles showing and hiding help. Also changes the variable text.
   toggle = (e) => {
     e.preventDefault();
