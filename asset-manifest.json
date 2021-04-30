@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tarot-api/static/css/main.837911bd.chunk.css",
+    "main.css": "/tarot-api/static/css/main.bc903436.chunk.css",
     "main.js": "/tarot-api/static/js/main.10b7ce44.chunk.js",
     "main.js.map": "/tarot-api/static/js/main.10b7ce44.chunk.js.map",
     "runtime-main.js": "/tarot-api/static/js/runtime-main.29356f7e.js",
@@ -8,7 +8,7 @@
     "static/js/2.d1fdfbc5.chunk.js": "/tarot-api/static/js/2.d1fdfbc5.chunk.js",
     "static/js/2.d1fdfbc5.chunk.js.map": "/tarot-api/static/js/2.d1fdfbc5.chunk.js.map",
     "index.html": "/tarot-api/index.html",
-    "static/css/main.837911bd.chunk.css.map": "/tarot-api/static/css/main.837911bd.chunk.css.map",
+    "static/css/main.bc903436.chunk.css.map": "/tarot-api/static/css/main.bc903436.chunk.css.map",
     "static/js/2.d1fdfbc5.chunk.js.LICENSE.txt": "/tarot-api/static/js/2.d1fdfbc5.chunk.js.LICENSE.txt",
     "static/media/galaxy-fill.a1fb1a55.svg": "/tarot-api/static/media/galaxy-fill.a1fb1a55.svg",
     "static/media/galaxy.39e03ded.svg": "/tarot-api/static/media/galaxy.39e03ded.svg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.29356f7e.js",
     "static/js/2.d1fdfbc5.chunk.js",
-    "static/css/main.837911bd.chunk.css",
+    "static/css/main.bc903436.chunk.css",
     "static/js/main.10b7ce44.chunk.js"
   ]
 }
