@@ -16,8 +16,13 @@ class ThreeCard extends Component {
   }
 
   componentDidMount() {
+    setTimeout(this.hideGalaxy, 500);
     this.randomNumGeneration();
   }
+
+  hideGalaxy = () => {
+    document.getElementById("App-logo").style.display = "none";
+  };
   // shouldComponentUpdate(nextProps, nextState) {
   //   return this.state.showing !== nextState.showing;
   // }

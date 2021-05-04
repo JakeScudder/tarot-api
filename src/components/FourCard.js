@@ -17,8 +17,13 @@ class FourCard extends Component {
   }
 
   componentDidMount() {
+    setTimeout(this.hideGalaxy, 500);
     this.randomNumGeneration();
   }
+
+  hideGalaxy = () => {
+    document.getElementById("App-logo").style.display = "none";
+  };
 
   toggle = () => {
     this.setState({
