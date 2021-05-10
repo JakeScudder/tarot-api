@@ -135,7 +135,7 @@ h3 {
   width: 90px;
   height: 45px;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 1px 1px 5px;
 }
 
@@ -832,7 +832,7 @@ p {
 
   .nav-li a {
     font-size: 24px;
-    padding: 30px 30px;
+    padding: 10px 10px;
   }
 
   .card-container {
